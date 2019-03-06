@@ -18,6 +18,7 @@ class CharacterListView extends React.Component {
     if (this.props.fetching) {
       <Loader type='Ball-Triangle' color='#00BFFF' height='90' width='60' />
     }
+
     return (
       <div className="CharactersList_wrapper">
         <CharacterList characters={this.props.characters} />
@@ -28,7 +29,7 @@ class CharacterListView extends React.Component {
 
 // our mapStateToProps needs to have two properties inherited from state
 const mapStateToProps = state => {
-
+  
 }
 
 // the characters and the fetching boolean

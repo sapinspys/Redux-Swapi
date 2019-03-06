@@ -12,5 +12,5 @@ export const FAILURE = 'FAILURE';
 // remember that now we have controll over our thunk-based action creator
 
 export const fetchData = () => dispatch => {
-  
+  dispatch ({ type: FETCHING })
 }
