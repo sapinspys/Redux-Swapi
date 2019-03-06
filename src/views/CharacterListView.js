@@ -9,7 +9,7 @@ import Loader from 'react-loader-spinner';
 class CharacterListView extends Component {
 
   componentDidMount() {
-    this.props.fetchData;
+    this.props.fetchData();
   }
 
   render() {
@@ -28,9 +28,9 @@ class CharacterListView extends Component {
 // our mapStateToProps needs to have two properties inherited from state
 const mapStateToProps = (state) => {
   return {
-    characters: state.characters,
-    fetching: state.fetching,
-    error: state.error,
+    characters: state.charsReducer.characters,
+    fetching: state.charsReducer.fetching,
+    error: state.charsReducer.error,
   }
 }
 

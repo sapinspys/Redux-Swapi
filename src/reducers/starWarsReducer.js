@@ -1,4 +1,4 @@
-import { FETCHING, SUCCESS, FAILURE } from "../actions";
+import { FETCHING, SUCCESS, FAILURE } from "../actions"
 
 const initialState = {
   // Array characters, Boolean fetching, null error.
@@ -23,12 +23,12 @@ export const charsReducer = (state = initialState, action) => {
         ...state,
         error: null,
         fetching: false,
-        characters: action.payload,
+        characters: action.payload.results,
       }
-      case FAILURE:
+    case FAILURE:
       return {
         ...state,
-        error: action.payload,
+        error: action.payload.results,
         fetching: false,
         characters: [],
       }
